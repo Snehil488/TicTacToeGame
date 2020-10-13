@@ -14,7 +14,7 @@ namespace TicTacToeGame
             Console.WriteLine("Computer's Letter :"+computerLetter);
             ticTacToe.showBoard(gameBoard);
             ticTacToe.MakeYourMove(gameBoard, userLetter);
-            ticTacToe.DoAToss();
+            string winner = ticTacToe.DoAToss();
         }
     }
 }

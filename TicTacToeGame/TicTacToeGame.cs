@@ -6,8 +6,9 @@ namespace TicTacToeGame
 {
     class TicTacToeGame
     {
-        private const int HEAD = 1;
-        private const int TAIL = 2;
+        private const int HEAD = 0;
+        private const int TAIL = 1;
+        private string[] Players = { "USER", "COMPUTER" };
         public char[] CreateBoard()
         {
             char[] gameBoard = new char[10];
@@ -81,19 +82,23 @@ namespace TicTacToeGame
             else
                 return false;
         }
-        public void DoAToss()
+        public string DoAToss()
         {
             Random random = new Random();
-            int result = random.Next(1, 3);
+            int result = random.Next(0, 2);
+            string winner="";
             switch (result)
             {
                 case HEAD :
                     Console.WriteLine("User Won The Toss.");
+                    winner = Players[HEAD];
                     break;
                 case TAIL :
                     Console.WriteLine("Computer Won The Toss");
+                    winner = Players[TAIL];
                     break;
             }
+            return winner;
         }
     }
 }
