@@ -15,5 +15,21 @@ namespace TicTacToeGame
             }
             return gameBoard;
         }
+        public char ChooseLetter()
+        {
+            while (true)
+            {
+                Console.WriteLine("Choose a Letter among 'X' or 'O' ");
+                char userLetter = Convert.ToChar(Console.ReadLine());
+                if (userLetter == 'X' || userLetter == 'O')
+                {
+                    return userLetter;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input. Try Again.");
+                }
+            }
+        }
     }
 }
