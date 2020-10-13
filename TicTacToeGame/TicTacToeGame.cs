@@ -9,7 +9,7 @@ namespace TicTacToeGame
         public char[] CreateBoard()
         {
             char[] gameBoard = new char[10];
-            for (int block = 1; block < 10; block++)
+            for (int block = 1; block < gameBoard.Length; block++)
             {
                 gameBoard[block] = ' ';
             }
