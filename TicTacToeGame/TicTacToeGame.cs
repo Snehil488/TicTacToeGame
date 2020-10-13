@@ -20,7 +20,7 @@ namespace TicTacToeGame
             while (true)
             {
                 Console.WriteLine("Choose a Letter among 'X' or 'O' ");
-                char userLetter = Convert.ToChar(Console.ReadLine());
+                char userLetter = (Console.ReadLine()).ToUpper()[0];
                 if (userLetter == 'X' || userLetter == 'O')
                 {
                     return userLetter;
