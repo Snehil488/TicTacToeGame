@@ -55,9 +55,9 @@ namespace TicTacToeGame
         public void MakeYourMove(char[] gameBoard, char userLetter)
         {
             Console.WriteLine("Enter Index of Desired Position :");
-            int index = Convert.ToInt32(Console.ReadLine());
             while (true)
             {
+                int index = Convert.ToInt32(Console.ReadLine());
                 if (gameBoard[index] == ' ')
                 {
                     gameBoard[index] = userLetter;
