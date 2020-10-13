@@ -31,5 +31,26 @@ namespace TicTacToeGame
                 }
             }
         }
+        public char getCompLetter(char userLetter)
+        {
+            char computerLetter;
+            if (userLetter == 'X')
+            {
+                computerLetter = 'O';
+            }
+            else
+            {
+                computerLetter = 'X';
+            }
+            return computerLetter;
+        }
+        public void showBoard(char[] gameBoard)
+        {
+            Console.WriteLine(gameBoard[1]+" | "+gameBoard[2]+" | "+gameBoard[3]);
+            Console.WriteLine("-----------");
+            Console.WriteLine(gameBoard[4]+" | "+gameBoard[5]+" | "+gameBoard[6]);
+            Console.WriteLine("-----------");
+            Console.WriteLine(gameBoard[7]+" | "+gameBoard[8]+" | "+gameBoard[9]);
+        }
     }
 }
