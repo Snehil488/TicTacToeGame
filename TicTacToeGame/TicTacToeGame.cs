@@ -52,5 +52,22 @@ namespace TicTacToeGame
             Console.WriteLine("-----------");
             Console.WriteLine(gameBoard[7]+" | "+gameBoard[8]+" | "+gameBoard[9]);
         }
+        public void MakeYourMove(char[] gameBoard, char userLetter)
+        {
+            Console.WriteLine("Enter Index of Desired Position :");
+            int index = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                if (gameBoard[index] == ' ')
+                {
+                    gameBoard[index] = userLetter;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Already Taken, Choose different Position");
+                }
+            }
+        }
     }
 }
