@@ -58,14 +58,17 @@ namespace TicTacToeGame
             while (true)
             {
                 int index = Convert.ToInt32(Console.ReadLine());
-                if (gameBoard[index] == ' ')
+                if (index > 0 && index < 10)
                 {
-                    gameBoard[index] = userLetter;
-                    break;
+                    if(gameBoard[index] == ' ')
+                    {
+                        gameBoard[index] = userLetter;
+                        break;
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Already Taken, Choose different Position");
+                    Console.WriteLine("Try Again.");
                 }
             }
         }
