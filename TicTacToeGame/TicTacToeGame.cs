@@ -60,7 +60,7 @@ namespace TicTacToeGame
                 int index = Convert.ToInt32(Console.ReadLine());
                 if (index > 0 && index < 10)
                 {
-                    if(gameBoard[index] == ' ')
+                    if(IsSpaceFree(gameBoard, index))
                     {
                         gameBoard[index] = userLetter;
                         break;
@@ -71,6 +71,13 @@ namespace TicTacToeGame
                     Console.WriteLine("Try Again.");
                 }
             }
+        }
+        public bool IsSpaceFree(char[] gameBoard, int index)
+        {
+            if (gameBoard[index] == ' ')
+                return true;
+            else
+                return false;
         }
     }
 }
